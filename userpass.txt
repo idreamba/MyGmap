@@ -1,0 +1,84 @@
+aws.amazon.com
+
+user: idreamba@live.com
+pass: lovesom2010
+
+
+_______
+
+password connect: 
+
+$F(;7V387E
+
+
+——
+connect Ubuntu
+
+ssh -i "AWS-WIN-idreamba2015.pem" ubuntu@52.76.73.126
+
+
+ติดตั้ง Learning locker
+
+sudo apt-get install lxc.
+
+sudo lxc-create -t ubuntu -n learninglocker
+
+sudo lxc-start -n learninglocker
+
+login = username = ubuntu, password = ubuntu
+
+
+
+Install the required software
+——
+
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+
+echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+
+sudo apt-get update
+
+sudo apt-get install -y mongodb-org
+
+—
+run mongoldb
+—
+sudo service mongod status
+
+>>mongo
+
+ออก >> exit
+
+—
+
+Other Program
+—
+
+sudo apt-get install curl nano apache2 php5 php5-mongo php5-mcrypt git node npm mysql-server postfix
+
+
+password mysql : ubuntu
+เลือก internet site
+mailname: learninglocker ใช้ไปก่อน
+—
+
+ให้ทำการเช็ค status
+
+sudo service apache2 status
+
+sudo service mongod status
+
+sudo service mysql status
+
+sudo service postfix status
+
+—
+เปิดเว็บเข้าไปที่ 10.0.3.8
+
+—
+ติดตั้ง x-window ออกมาจาก lxc ก่อน
+
+sudo apt-get update
+
+sudo apt-get install xorg xterm gdm ubuntu-desktop menu firefox chromium-browser gksu synaptic --no-install-recommends
+
